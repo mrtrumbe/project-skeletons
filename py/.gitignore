@@ -1,1 +1,7 @@
 *.pyc
+.Python
+bin
+include
+lib
+pip-selfcheck.json
+testpkg.egg-info
