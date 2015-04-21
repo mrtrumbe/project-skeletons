@@ -1,4 +1,7 @@
-A set of skeletons to make bootstrapping projects easier.
+Project Skeletons
+-----------------
+
+_A set of skeletons to make bootstrapping projects easier._
 
 Skeletons are organized by language. Each language can have multiple skeleton flavors (for instance we might have a basic
 python skeleton and a python skeleton for django projects). 
