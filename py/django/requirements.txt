@@ -1,0 +1,6 @@
+requests==1.2.0
+paramiko==1.9.0
+fabric==1.5.2
+boto==2.37.0
+django==1.7
+django-annoying==0.8.1
