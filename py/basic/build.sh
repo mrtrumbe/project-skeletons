@@ -82,6 +82,16 @@ then
     printf -- '- Creating wheel with: python setup.py bdist_wheel\n'
     python setup.py bdist_wheel
 else
+    # setup the environment first, if an .env file doesn't exist
+    if [ ! -f ".env" ];
+    then
+        if [ -f ".env.template" ];
+        then
+            printf -- "- Setting up .env file for development by copying .env.template to .env.\n"
+            cp ".env.template" ".env"
+        fi
+    fi
+
     printf -- "- Building editable environment with: bin/pip install --upgrade $editable\n"
     bin/pip install --upgrade $editable
 fi

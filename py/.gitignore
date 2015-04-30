@@ -1,5 +1,6 @@
 *.pyc
 .Python
+.env
 bin
 include
 lib

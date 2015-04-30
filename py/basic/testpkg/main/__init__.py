@@ -1,4 +1,9 @@
 import requests
+import sys
+from testpkg.main.conf import CONFIG
 
 def sample():
-    print 'blah'
+    env = CONFIG.ENVIRONMENT_NAME
+    args = ' '.join(sys.argv[1:])
+    print "Running sample script in environment '{}', with args: {}".format(env, args)
+
