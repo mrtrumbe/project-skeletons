@@ -109,7 +109,8 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
         'console_scripts': [
-            'sample=testpkg.main:sample',
+            'sample=djangopkg.main:sample',
+            'django=django.core.management:execute_from_command_line',
         ],
     },
 )
