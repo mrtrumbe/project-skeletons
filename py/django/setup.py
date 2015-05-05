@@ -81,6 +81,7 @@ setup(
         'fabric', 
         'django',
         'django-annoying',
+        
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -88,8 +89,8 @@ setup(
     # for example:
     # $ pip install -e .[dev,test]
     extras_require={
-        'dev': ['boto'],
-        'test': [],
+        'dev': ['boto', ],
+        'prod': ['uwsgi', ],
     },
 
     # If there are data files included in your packages that need to be
