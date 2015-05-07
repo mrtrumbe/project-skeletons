@@ -6,4 +6,4 @@ include
 lib
 dist
 pip-selfcheck.json
-testpkg.egg-info
+*.egg-info

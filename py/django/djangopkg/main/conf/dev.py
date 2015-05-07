@@ -1,3 +1,17 @@
+from os import path
+
+DEBUG=True
+
+PROJECT_ROOT = path.normpath(
+    path.join(
+        path.dirname(path.realpath(__file__)), '..', '..', '..', '..')
+)
+
+SECRET_KEY = 'BJ_C_Uj)=B+I!MI,bJuU|Ko=3~RRoaeq5[dscgv.>sOj|[VVk~'
+
+STATIC_URL = '/static/'
+
+
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.auth',
@@ -5,20 +19,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'pagination',
-    'south',
-    'kombu.transport.django',
-    'djcelery',
-    'cpserver',
 
     # our apps
-    'contract',
-    'position',
-    'trades',
-    'common',
-    'notification',
-    'marketdata',
-    'risk',
+    'djangopkg.widget',
 ]
 
 
@@ -28,7 +31,6 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
-    'pagination.middleware.PaginationMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'common.tspapi.TspApiMiddleware',
 ]
@@ -39,7 +41,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_DIRS = [
-    path.normpath(path.join(settings.PROJECT_ROOT, 'templates')),
+    path.normpath(path.join(PROJECT_ROOT, 'templates')),
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [

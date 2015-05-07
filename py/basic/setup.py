@@ -104,6 +104,7 @@ setup(
     entry_points={
         'console_scripts': [
             'sample=testpkg.main:sample',
+            'test=testpkg.main:run_tests',
         ],
     },
 )
